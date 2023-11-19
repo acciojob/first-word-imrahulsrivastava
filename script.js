@@ -1,16 +1,11 @@
 function firstWord(s) {
   // your code here
 
-  const arr = [];
-
-  for (let i = 0; i < s.length; i++) {
-    if (s.charAt(i) === " ") {
-      return arr.join("");
-    }
-    arr.push(s.charAt(i));
+  let i = 0;
+  while (i < s.length && s[i] !== " ") {
+    i++;
   }
-
-  return arr.join("");
+  return s.substring(0, i);
 }
 
 // Do not change the code below
