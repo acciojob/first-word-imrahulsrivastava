@@ -5,11 +5,17 @@ function firstWord(s) {
     return s;
   }
 
-  let i = 0;
-  while (i < s.length && s[i] !== " ") {
-    i++;
+  const arr = [];
+  arr.push(s.charAt(0));
+
+  for (let i = 1; i < s.length; i++) {
+    if (s.charAt(i) === " ") {
+      return arr.join("").trim();
+    }
+    arr.push(s.charAt(i));
   }
-  return s.substring(0, i);
+
+  return arr.join("").trim();
 }
 
 // Do not change the code below
